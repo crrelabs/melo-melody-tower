@@ -400,12 +400,7 @@ amenities								</div>
 				<div class="elementor-element elementor-element-7b3ab42 elementor-widget elementor-widget-heading" data-id="7b3ab42" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default">Book your visit</h2>				</div>
 				<div class="elementor-element elementor-element-cf24793 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="cf24793" data-element_type="widget" data-e-type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
-							<form class="elementor-form" method="post" name="New Form" aria-label="New Form">
-			<input type="hidden" name="post_id" value="34"/>
-			<input type="hidden" name="form_id" value="cf24793"/>
-			<input type="hidden" name="referer_title" value="" />
-
-							<input type="hidden" name="queried_id" value="34"/>
+							<form class="elementor-form" id="contactForm" method="post" action="mailto:info@melodytower.com" enctype="text/plain" name="New Form" aria-label="New Form">
 			
 			<div class="elementor-form-fields-wrapper elementor-labels-above">
 								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50 elementor-md-100">
@@ -437,6 +432,15 @@ amenities								</div>
 				</div>
 			</div>
 		</form>
+<p style="margin-top:12px;font-size:14px;opacity:.8">Sending opens your email app. You can also email <a href="mailto:info@melodytower.com">info@melodytower.com</a> or call <a href="tel:305-377-9009">305-377-9009</a>.</p>
+<script>
+window.addEventListener("submit",function(e){var f=e.target;if(!f||f.id!=="contactForm")return;e.preventDefault();e.stopImmediatePropagation();
+var v=function(id){var x=document.getElementById(id);return x?x.value.trim():"";};
+var n=v("form-field-name");
+var body="Name: "+n+"\nEmail: "+v("form-field-email")+"\nPhone: "+(v("form-field-field_da65d4d")||"n/a")+"\n\n"+v("form-field-message");
+window.location.href="mailto:info@melodytower.com?subject="+encodeURIComponent("Melody Tower Visit Request"+(n?" from "+n:""))+"&body="+encodeURIComponent(body);
+},true);
+</script>
 						</div>
 				</div>
 				</div>
